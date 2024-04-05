@@ -19,6 +19,7 @@ package com.netflix.zuul;
 import com.google.errorprone.annotations.DoNotCall;
 import com.netflix.zuul.filters.FilterType;
 import com.netflix.zuul.filters.ZuulFilter;
+import io.github.pixee.security.BoundedLineReader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -92,7 +93,7 @@ public final class StaticFilterLoader implements FilterLoader {
                     InputStreamReader isr = new InputStreamReader(is, StandardCharsets.UTF_8);
                     BufferedReader br = new BufferedReader(isr)) {
                 String line;
-                while ((line = br.readLine()) != null) {
+                while ((line = BoundedLineReader.readLine(br, 5_000_000)) != null) {
                     String trimmed = line.trim();
                     if (!trimmed.isEmpty()) {
                         Class<?> clz;
