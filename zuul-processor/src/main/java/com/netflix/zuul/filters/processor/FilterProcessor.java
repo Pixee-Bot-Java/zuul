@@ -17,6 +17,7 @@
 package com.netflix.zuul.filters.processor;
 
 import com.google.common.annotations.VisibleForTesting;
+import io.github.pixee.security.BoundedLineReader;
 
 import javax.annotation.processing.AbstractProcessor;
 import javax.annotation.processing.Filer;
@@ -124,7 +125,7 @@ public final class FilterProcessor extends AbstractProcessor {
         BufferedReader br = new BufferedReader(reader);
         String line;
         List<String> lines = new ArrayList<>();
-        while ((line = br.readLine()) != null) {
+        while ((line = BoundedLineReader.readLine(br, 5_000_000)) != null) {
             if (line.trim().isEmpty()) {
                 continue;
             }
