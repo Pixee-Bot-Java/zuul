@@ -24,6 +24,9 @@ import io.netty.channel.ChannelPromise;
 import io.netty.util.AttributeKey;
 
 public class ConnectionCloseChannelAttributes {
+    private ConnectionCloseChannelAttributes() {
+    }
+    
     public static final AttributeKey<ChannelPromise> CLOSE_AFTER_RESPONSE =
             AttributeKey.newInstance("CLOSE_AFTER_RESPONSE");
     public static final AttributeKey<ConnectionCloseType> CLOSE_TYPE = AttributeKey.newInstance("CLOSE_TYPE");

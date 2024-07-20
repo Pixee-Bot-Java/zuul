@@ -37,6 +37,9 @@ import java.time.LocalDateTime;
  * Time: 3:51 PM
  */
 public final class AccessLogChannelHandler {
+    private AccessLogChannelHandler() {
+    }
+    
     private static final AttributeKey<RequestState> ATTR_REQ_STATE =
             AttributeKey.newInstance("_accesslog_requeststate");
 

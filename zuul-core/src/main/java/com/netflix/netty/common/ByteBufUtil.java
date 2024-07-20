@@ -29,6 +29,9 @@ import io.netty.util.ResourceLeakDetector;
  */
 public class ByteBufUtil {
 
+private ByteBufUtil() {
+}
+
     private static final boolean isAdvancedLeakDetection =
             ResourceLeakDetector.getLevel().ordinal() >= ResourceLeakDetector.Level.ADVANCED.ordinal();
 

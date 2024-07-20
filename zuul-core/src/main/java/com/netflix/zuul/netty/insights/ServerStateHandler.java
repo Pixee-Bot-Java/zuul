@@ -34,6 +34,9 @@ import org.slf4j.LoggerFactory;
  */
 public final class ServerStateHandler {
 
+private ServerStateHandler() {
+}
+
     private static final Logger logger = LoggerFactory.getLogger(ServerStateHandler.class);
 
     private static CurrentPassport passport(ChannelHandlerContext ctx) {

@@ -27,6 +27,9 @@ import io.netty.util.AttributeKey;
  * Time: 4:29 PM
  */
 public class HttpChannelFlags {
+    private HttpChannelFlags() {
+    }
+    
     public static final Flag IN_BROWNOUT = new Flag("_brownout");
 
     public static final Flag CLOSING = new Flag("_connection_closing");

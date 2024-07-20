@@ -31,6 +31,9 @@ import java.net.SocketAddress;
  * Time: 2:41 PM
  */
 public final class PassportStateOriginHandler {
+    private PassportStateOriginHandler() {
+    }
+    
     private static CurrentPassport passport(ChannelHandlerContext ctx) {
         return CurrentPassport.fromChannel(ctx.channel());
     }

@@ -29,6 +29,9 @@ import io.netty.util.AsyncMapping;
  * Time: 6:21 PM
  */
 public class CommonChannelConfigKeys {
+    private CommonChannelConfigKeys() {
+    }
+    
     public static final ChannelConfigKey<Boolean> withProxyProtocol =
             new ChannelConfigKey<>("withProxyProtocol", false);
     public static final ChannelConfigKey<StripUntrustedProxyHeadersHandler.AllowWhen> allowProxyHeadersWhen =

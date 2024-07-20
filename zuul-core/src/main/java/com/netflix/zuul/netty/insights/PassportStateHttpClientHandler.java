@@ -34,6 +34,9 @@ import io.netty.handler.codec.http.LastHttpContent;
  */
 public final class PassportStateHttpClientHandler {
 
+private PassportStateHttpClientHandler() {
+}
+
     private static CurrentPassport passport(ChannelHandlerContext ctx) {
         return CurrentPassport.fromChannel(ctx.channel());
     }

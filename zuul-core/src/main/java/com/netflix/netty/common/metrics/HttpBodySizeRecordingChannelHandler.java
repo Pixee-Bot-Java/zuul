@@ -34,6 +34,9 @@ import javax.inject.Provider;
  * Time: 3:51 PM
  */
 public final class HttpBodySizeRecordingChannelHandler {
+    private HttpBodySizeRecordingChannelHandler() {
+    }
+    
     private static final AttributeKey<State> ATTR_STATE = AttributeKey.newInstance("_http_body_size_state");
 
     public static Provider<Long> getCurrentInboundBodySize(Channel ch) {

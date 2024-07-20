@@ -36,6 +36,9 @@ import javax.annotation.Nullable;
  * Time: 11:05 PM
  */
 public class HttpUtils {
+    private HttpUtils() {
+    }
+    
     private static final Logger LOG = LoggerFactory.getLogger(HttpUtils.class);
     private static final char[] MALICIOUS_HEADER_CHARS = {'\r', '\n'};
 

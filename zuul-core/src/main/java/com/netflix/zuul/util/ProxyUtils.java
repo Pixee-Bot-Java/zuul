@@ -31,6 +31,9 @@ import java.util.Set;
  * Time: 11:50 AM
  */
 public class ProxyUtils {
+    private ProxyUtils() {
+    }
+    
     private static final CachedDynamicBooleanProperty OVERWRITE_XF_HEADERS =
             new CachedDynamicBooleanProperty("zuul.headers.xforwarded.overwrite", false);
 

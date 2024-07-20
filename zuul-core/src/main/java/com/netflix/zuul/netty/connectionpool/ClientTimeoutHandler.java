@@ -34,6 +34,9 @@ import java.time.Duration;
  * Date: July 01, 2019
  */
 public final class ClientTimeoutHandler {
+    private ClientTimeoutHandler() {
+    }
+    
     private static final Logger LOG = LoggerFactory.getLogger(ClientTimeoutHandler.class);
 
     public static final AttributeKey<Duration> ORIGIN_RESPONSE_READ_TIMEOUT =
